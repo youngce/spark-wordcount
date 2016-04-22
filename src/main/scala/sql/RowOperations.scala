@@ -6,7 +6,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 /**
   * Created by mark on 2016/4/20.
   */
-object ConvertRDD2DF {
+object RowOperations extends App{
 
   val sc: SparkContext=new SparkContext(new SparkConf().setAppName("sql").setMaster("local")) // An existing SparkContext.
   val sqlCtx = new org.apache.spark.sql.SQLContext(sc)

@@ -20,7 +20,7 @@ object JoinExam extends App{
   val people = sc.parallelize(Seq(Person(1,"mark",30),Person(2,"jason",22))).toDF()
   val addresses = sc.parallelize(Seq(Address(1,"Taipei"),Address(1,"I-Lan"),Address(2,"Taichung"))).toDF()
 
-  //people.join(addresses,people("id")===addresses("personId")).show()
+  people.join(addresses,people("id")===addresses("personId")).show()
 
 
   people.registerTempTable("people")
